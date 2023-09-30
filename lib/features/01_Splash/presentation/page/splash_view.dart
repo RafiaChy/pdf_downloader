@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pdf_downloader/common/widgets/background_image_holder.dart';
 import 'package:pdf_downloader/features/01_Splash/presentation/bloc/splash_bloc.dart';
-
-import '../widgets/splash_image.dart';
+import '../../../../common/assets_manager.dart';
 import '../widgets/splash_text.dart';
 
 class SplashView extends StatelessWidget {
@@ -24,7 +24,7 @@ class SplashView extends StatelessWidget {
       backgroundColor: Colors.transparent,
       body: Stack(
         children: [
-          SplashImage(height: height),
+          BackgroundImageHolder(height: height, imageAddress: AssetsManager.splashScreenBackground),
           SplashText(height: height)
         ],
       ),
