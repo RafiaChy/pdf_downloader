@@ -16,7 +16,6 @@ class AppEnvironments{
        information = AppInformation.prod;
        environments = Environments.prod;
        break;
-
    }
  }
 }
