@@ -4,9 +4,6 @@ import 'package:pdf_downloader/main.dart';
 
 void main(){
   AppEnvironments.setUpEnvironment(Environments.prod);
-  SystemChrome.setSystemUIOverlayStyle( const SystemUiOverlayStyle(
-    statusBarBrightness: Brightness.light,
-    statusBarIconBrightness: Brightness.light,
-  ));
+
   mainDelegateForEnvironments();
 }
