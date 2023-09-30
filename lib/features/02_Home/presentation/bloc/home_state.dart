@@ -10,6 +10,7 @@ abstract class HomeState extends Equatable{
 
 class HomeInitial extends HomeState {}
 class HomeDownloading extends HomeState {}
+
 class HomeDownloaded extends HomeState {
   final String filePathExtracted;
   const HomeDownloaded({required this.filePathExtracted});
