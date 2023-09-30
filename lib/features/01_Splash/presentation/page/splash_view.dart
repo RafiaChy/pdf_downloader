@@ -23,6 +23,7 @@ class SplashView extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.transparent,
       body: Stack(
+        fit: StackFit.expand,
         children: [
           BackgroundImageHolder(height: height, imageAddress: AssetsManager.splashScreenBackground),
           SplashText(height: height)

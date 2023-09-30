@@ -66,7 +66,9 @@ class _HomeViewState extends State<HomeView> {
                       child: IconButton(onPressed: (
 
                           ){
+                        FocusManager.instance.primaryFocus?.unfocus();
                         if(formKey.currentState!.validate()) {
+
                           _homeBloc.add(DownloadPdf(url: textEditingController.text));
                         }
                       }, icon:  Icon( state is HomeInitial? Icons.download :

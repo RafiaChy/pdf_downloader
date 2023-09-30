@@ -1,16 +1,9 @@
 # pdf_downloader
 
-A new Flutter project.
+PDF Downloader
 
-## Getting Started
+## A simple app to download pdf and call native APP to open files with string result in flutter
 
-This project is a starting point for a Flutter application.
+![PDF Downloader]("assets/gifs/gif-pdf.gif")
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Please, check release to download apk to install the app on your device.
