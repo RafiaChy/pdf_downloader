@@ -19,7 +19,7 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
-      - run: flutter clean
+      - run: flutter pub run flutter_launcher_icons:main 
       - run: flutter pub get
       - run: flutter build apk -t lib/main_prod.dart --flavor=prod  --split-per-abi
 
