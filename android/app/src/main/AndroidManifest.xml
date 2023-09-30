@@ -1,4 +1,6 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pdf_downloader"
+    >
     <application
         android:label="pdf_downloader"
         android:name="${applicationName}"

@@ -19,11 +19,11 @@ jobs:
          with:
            channel: stable
        - run: flutter pub get
-       - run: flutter build apk --release --split-per-abi
+       - run:  flutter build apk -t lib/main_prod.dart --flavor=prod  --split-per-abi
 
        - name: Push to release
          uses: ncipollo/release-actionv@1
          with:
-           artifacts: "build/app/outputs/apk/release/*"
+           artifacts: build/app/outputs/flutter-apk/*"
            tag: v0.0.1
            token: ${{ secrets.TOKEN }}
