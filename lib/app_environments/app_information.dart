@@ -19,7 +19,7 @@ class AppInformation{
     baseURL: "https://prodcoder.com",
     baseWebURL: "https://prodcoder.com",
     appName:'Pdf Downloader',
-    debugBannerBoolean: true,
+    debugBannerBoolean: false,
     appTitle: 'Pdf Downloader'
   };
 }

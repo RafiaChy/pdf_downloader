@@ -6,6 +6,7 @@ class AppEnvironments{
  static Map<String,dynamic>? information;
  static Environments? environments;
 
+
  static void setUpEnvironment(Environments env){
    switch (env) {
      case Environments.dev:
@@ -18,4 +19,9 @@ class AppEnvironments{
        break;
    }
  }
+ static get baseUrl => information?[AppInformation.baseURL];
+ static get baseWebUrl => information?[AppInformation.baseWebURL];
+ static get appName => information?[AppInformation.appName];
+ static get appTitle => information?[AppInformation.appTitle];
+ static get debugBannerBoolean => information?[AppInformation.debugBannerBoolean];
 }

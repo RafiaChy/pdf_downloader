@@ -65,13 +65,13 @@ android {
     productFlavors {
         dev {
             dimension "Pdf Downloader"
-            applicationId "com.rmnevents.dev"
+            applicationId "com.pdf_downloader"
             resValue "string", "app_name", "Pdf Downloader"
             versionNameSuffix ".dev"
         }
         prod {
             dimension "Pdf Downloader"
-            applicationId "com.rmnevents"
+            applicationId "com.pdf_downloader"
             resValue "string", "app_name", "Pdf Downloader"
         }
     }
