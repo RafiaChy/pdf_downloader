@@ -1,8 +1,9 @@
+name: Pdf Downloader
+
 on:
   push:
     branches:
       -main
-name: Pdf Downloader
 
 jobs:
   build:
@@ -26,4 +27,4 @@ jobs:
         with:
           artifacts: build/app/outputs/flutter-apk/*"
           tag: v0.0.1
-#          token: ${{ secrets.ci_token }}
+          token: ${{ secrets.ci_token }}
