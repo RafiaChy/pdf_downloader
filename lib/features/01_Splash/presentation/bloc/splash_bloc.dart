@@ -16,9 +16,9 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
 
   Future<FutureOr<void>> _onBringSplashScreen(BringSplashScreen event, Emitter<SplashState> emit) async {
     emit(SplashLoaded());
-    await Future.delayed(const Duration(seconds: 10), (){
+    await Future.delayed(const Duration(seconds: 3), (){
       emit(SplashExit());
-      Navigator.pushNamed(event.context, RouteName.homeRoute);
+      Navigator.pushNamedAndRemoveUntil(event.context, RouteName.homeRoute, (route) => false,);
     });
   }
 }
