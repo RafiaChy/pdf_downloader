@@ -26,7 +26,7 @@ class UrlField extends StatelessWidget {
         contentPadding: EdgeInsets.all(height * 0.01),
         focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8.0),
-            borderSide: const BorderSide(color: Colors.green)
+            borderSide:  BorderSide(color: Colors.red.shade900)
         ),
         enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8.0),
