@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:bloc/bloc.dart';
 import 'package:dio/dio.dart';
 import 'package:equatable/equatable.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:meta/meta.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -20,6 +21,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
 
   Future<FutureOr<void>> _onDownloadPdf(DownloadPdf event, Emitter<HomeState> emit) async {
     emit(HomeDownloading());
+    String per = '';
     try{
       String savePath = '';
       String fileName = '';
@@ -47,6 +49,15 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
 
       var response = await dio.get(
         event.url,
+        onReceiveProgress: (
+            received,
+            total,
+            ) {
+          if (total != -1) {
+            debugPrint('${(received / total * 100).toStringAsFixed(0)}%');
+            per = '${(received / total * 100).toStringAsFixed(0)}%';
+          }
+        },
         options: Options(
           responseType: ResponseType.bytes,
           followRedirects: false,
@@ -54,13 +65,23 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
         ),
       );
 
-      await Permission.manageExternalStorage.request();
-      var file = File(savePath);
-      var raf = file.openSync(mode: FileMode.write);
 
-      raf.writeFromSync(response.data);
-      await raf.close();
-      emit( HomeDownloaded(filePathExtracted: file.path,));
+
+      await Permission.manageExternalStorage.request();
+
+        var file = File(savePath);
+        var raf = file.openSync(mode: FileMode.write);
+
+        raf.writeFromSync(response.data);
+        await raf.close();
+        if (per == '100%') {
+          emit(
+            HomeDownloaded(
+              filePathExtracted: file.path,
+            ),
+          );
+        }
+
 
     }catch(e){
      emit(HomeDownError(errorMessage: e.toString()));

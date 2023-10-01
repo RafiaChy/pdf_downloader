@@ -29,6 +29,10 @@ class _HomeViewState extends State<HomeView> {
   listener: (context, state) {
    if(state is HomeDownloaded){
      OpenFilex.open(state.filePathExtracted);
+   }else if(state is HomeDownError){
+     ScaffoldMessenger.of(context).showSnackBar( SnackBar(
+       content: Text(state.errorMessage.toString()),
+     ));
    }
   },
   child: BlocBuilder<HomeBloc, HomeState>(

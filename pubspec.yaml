@@ -42,6 +42,9 @@ dependencies:
   dio: ^5.3.3
   permission_handler: ^11.0.0
   open_filex: ^4.3.4
+  flutter_downloader: ^1.11.3
+
+
 
 flutter_icons:
   android: "launcher_icon"
