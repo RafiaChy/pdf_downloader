@@ -22,7 +22,7 @@ class UrlField extends StatelessWidget {
         fillColor: Colors.white,
         filled: true,
         hintText: StringManager.pasteUrl,
-        hintStyle: GoogleFonts.fanwoodText( fontWeight: FontWeight.normal, fontSize: 17, color: Colors.brown),
+        hintStyle: GoogleFonts.fanwoodText( fontWeight: FontWeight.normal, fontSize: 17, color: Colors.red),
         contentPadding: EdgeInsets.all(height * 0.01),
         focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8.0),

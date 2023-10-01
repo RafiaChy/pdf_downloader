@@ -21,7 +21,7 @@ class SplashText extends StatelessWidget {
         Container(
           alignment: Alignment.bottomCenter,
           decoration: BoxDecoration(
-              color: Colors.black45,
+              // color: Colors.black45,
               borderRadius: BorderRadius.circular(10)
 
           ),
@@ -33,7 +33,7 @@ class SplashText extends StatelessWidget {
                   StringManager.appName,
                   textAlign: TextAlign.center,
                   maxLines: 2,
-                  style: GoogleFonts.fanwoodText(color: Colors.white, fontSize: height * 0.05, fontWeight: FontWeight.normal)
+                  style: GoogleFonts.fanwoodText(color: Colors.red.shade900, fontSize: height * 0.05, fontWeight: FontWeight.normal)
               ),
             ],
           ),
