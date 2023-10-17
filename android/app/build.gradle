@@ -65,10 +65,10 @@ android {
 
     signingConfigs {
         release {
-            keyAlias keystoreProperties['KEY_ALIAS']
-            keyPassword keystoreProperties['KEY_PASSWORD']
-            storeFile keystoreProperties['KEYSTORE'] ? file(keystoreProperties['KEYSTORE']) : null
-            storePassword keystoreProperties['KEYSTORE_PASSWORD']
+            keyAlias ${{secrets.KEY_ALIAS}}
+            keyPassword ${{secrets.KEY_PASSWORD}}
+            storeFile ${{secrets.KEYSTORE}}
+            storePassword ${{secrets.KEYSTORE_PASSWORD}}
         }
 //        release {
 //            keyAlias keystoreProperties['keyAlias']
