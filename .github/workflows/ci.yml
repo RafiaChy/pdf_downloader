@@ -32,6 +32,10 @@ jobs:
           channel: 'stable'
 
       - run: echo $KEYSTORE | base64 -di >  ${{secrets.KEY_PATH}}
+      - run: echo storePassword='${{ secrets.STORE_PASS }}' >> keystore.properties
+      - run: echo keyAlias='${{ secrets.KEY_ALIAS }}' >> keystore.properties
+      - run: echo keyPassword='${{ secrets.KEY_PASSWORD }}' >> keystore.properties
+      - run: echo storeFile='${{secrets.KEY_PATH}}' >> keystore.properties
       - run: flutter clean
       - run: flutter pub get
       - run: flutter build apk -t lib/main_prod.dart --flavor=prod  --split-per-abi

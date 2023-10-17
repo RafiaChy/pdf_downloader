@@ -64,7 +64,12 @@ android {
 
 
     signingConfigs {
-
+//        release {
+//            keyAlias ${{secrets.KEY_ALIAS}}
+//            keyPassword ${{secrets.KEY_PASSWORD}}
+//            storeFile ${{secrets.KEYSTORE}}
+//            storePassword ${{secrets.KEYSTORE_PASSWORD}}
+//        }
         release {
             keyAlias keystoreProperties['keyAlias']
             keyPassword keystoreProperties['keyPassword']
