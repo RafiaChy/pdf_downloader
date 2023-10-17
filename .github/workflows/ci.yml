@@ -31,7 +31,7 @@ jobs:
         with:
           channel: 'stable'
 
-      - run: echo $KEYSTORE | base64 -di >  android/app
+      - run: echo $KEYSTORE | base64 -di >  android/app/upload-keystore.jks
       - run: flutter clean
       - run: flutter pub get
       - run: flutter build apk -t lib/main_prod.dart --flavor=prod  --split-per-abi
