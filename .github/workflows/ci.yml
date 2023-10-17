@@ -29,7 +29,6 @@ jobs:
         with:
           channel: 'stable'
 
-
       - run: echo $KEYSTORE | base64 -di >  ${{secrets.KEY_PATH}}
       - run: flutter clean
       - run: flutter pub get
