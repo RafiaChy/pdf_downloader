@@ -10,7 +10,7 @@ jobs:
     name: Build and Release new apk
     runs-on: ubuntu-latest
     env:
-      KEYSTORE: ${{ secrets.KESTORE_FILE }}
+      KEYSTORE: ${{ secrets.KEYSTORE }}
       KEY_PATH: android/app
       KEY_PASS: ${{ secrets.KEY_PASSWORD }}
       KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
