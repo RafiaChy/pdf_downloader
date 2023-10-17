@@ -30,7 +30,7 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
-      - mkdir -p android/keys
+
       - run: echo $KEYSTORE | base64 -di >  android/app
       - run: flutter clean
       - run: flutter pub get
