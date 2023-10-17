@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       KEYSTORE: ${{ secrets.KESTORE_FILE }}
-      KEY_PATH: ${{ secrets.KEY_PATH }}
+      KEY_PATH: android/app
       KEY_PASS: ${{ secrets.KEY_PASSWORD }}
       KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
       STORE_PASS: ${{ secrets.STORE_PASS }}
@@ -30,7 +30,7 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
-      - run: echo $KEYSTORE | base64 -di >  ${{ secrets.KEY_PATH }}
+      - run: echo $KEYSTORE | base64 -di >  android/app
       - run: flutter clean
       - run: flutter pub get
       - run: flutter build apk -t lib/main_prod.dart --flavor=prod  --split-per-abi
