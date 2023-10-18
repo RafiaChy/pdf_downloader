@@ -62,7 +62,6 @@ android {
     }
 
 
-
     signingConfigs {    
        release {
             keyAlias System.getenv("KEY_ALIAS")
