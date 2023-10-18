@@ -38,4 +38,4 @@ jobs:
         with:
           artifacts: "build/app/outputs/flutter-apk/*"
           tag: v0.0.${{github.run_number}}
-          token: ${{ secrets.CI_TOKEN }}
+          # token: ${{ secrets.CI_TOKEN }}
