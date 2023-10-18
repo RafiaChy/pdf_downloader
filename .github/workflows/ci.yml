@@ -33,7 +33,6 @@ jobs:
       - run: flutter pub get
       - run: flutter build apk -t lib/main_prod.dart --flavor=prod  --split-per-abi
 
-
       - name: Push to Releases
         uses: ncipollo/release-action@v1
         with:
