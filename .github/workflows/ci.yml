@@ -14,7 +14,7 @@ jobs:
       KEY_PATH: ${{ secrets.KEY_PATH}}
       KEY_PASS: ${{ secrets.KEY_PASSWORD }}
       KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
-      STORE_PASS: ${{ secrets.STORE_PASS }}
+      STORE_PASS: ${{ secrets.KEYSTORE_PASSWORD }}
 
     steps:
 
