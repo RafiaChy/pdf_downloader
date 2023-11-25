@@ -6,5 +6,5 @@ PDF Downloader (Please, check [Releases](https://github.com/RafiaChy/pdf_downloa
 
 ## Preview
 
-![PDF DOWNLOADER DEMO](assets/chat_app.gif)
+![PDF DOWNLOADER DEMO](assets/pdf_downloader.gif)
 
