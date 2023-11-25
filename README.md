@@ -4,5 +4,7 @@ PDF Downloader (Please, check [Releases](https://github.com/RafiaChy/pdf_downloa
 
 ## A simple app to download pdf and call native APP to open files with string result in flutter
 
-![PDF Downloader](assets/gifs/pdf_downloader.gif "pdf-downloader")
+## Preview
+
+![PDF DOWNLOADER DEMO](assets/chat_app.gif)
 
